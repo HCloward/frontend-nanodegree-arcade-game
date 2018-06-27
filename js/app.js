@@ -94,20 +94,20 @@ Player.prototype.handleInput = function(direction) {
         default:
     }
 }
-/*
+/* if you wanted to create a Singleton instead of a player class to create the player since there will only be one player
 player = {
     x:0,
     y:0,
     sprite: 'images/char-boy.png',
-    startPosition: function() {
+    startPosition: () => {
         this.x = 202;
         this.y = 400;
     },
-    update: function(dt) {  },
-    render: function() {
+    update: dt => {  },
+    render: () => {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     },
-    handleInput: function(direction) {
+    handleInput: direction => {
         switch(direction) {
             case 'left':
                 if (this.x > 100) this.x -= 101;
@@ -137,9 +137,31 @@ for (let i=0; i<5; i++) {
 }
 var player = new Player();
 // create an alert with player wins game
+
+var modal = document.getElementById('myModal');
+
 function winAlert() {
-    alert('You win!');
+    
+    // Get the modal
+    
+    modal.style.display = "block";
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 }
+
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
