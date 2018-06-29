@@ -1,5 +1,16 @@
 body {
     text-align: center;
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-top: 4%;
+    line-height: 1.8;
+    font-size: 1.25em;
+    font-family: 'Bree Serif', serif;
+
+}
+
+h1 {
+    margin-top: -4%;
 }
 /* The Modal (background) */
 .modal {
@@ -18,15 +29,15 @@ body {
 
 /* Modal Content */
 .modal-content {
-    background-color: #c3d2e8;
+    background-color: #c3e8e3f0;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Bree Serif', serif;;
     font-size: 3em;
     font-weight: bold;
-    color: #ff00ff;
+    color: #ff00ff5c;
 }
 
 /* The Close Button */
